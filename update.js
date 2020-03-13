@@ -16,7 +16,7 @@ function AddFood(){
 //random 1 - 10
 function RandomNumber(){
     let number ;
-    number = Math.floor(Math.random() * 10) + 1;
+    number = Math.floor(Math.random() * 20) + 1;
     return number;
 }
 function PlayAudioRandom(){
