@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+     <!-- Firebase CDN -->
+     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+ 
+     <!-- Firebase Connection -->
+     <script src="firebase.js"></script>
+     <script src="update.js"></script>
+
+</head>
+<body style="background-color:#ccffe6;">
+    <div class="container col-md-6 .bg-secondary" id="comment">
+        <h2 style="text-align: center;" >Random Food Generator</h2>
+        <hr>
+        <img src="Food.png" class="img-responsive col-md-12" id="MyImg" height="350" >
+        <p class="container col-md-8" id="Tname" >ชื่ออาหาร : </p>
+        <p class="container col-md-8" id="Tcalories" > ให้พลังงาน : </p>
+        <p class="container col-md-8" id="Tprice"> ราคา : </p>
+        <input type="button" id="btn_Random"  class="btn btn-danger col-md-12" value="Random">
+        <a href="index.html" id="btn_back" class="btn btn-primary col-md-12">Back</a>
+    </div>
+
+    <audio id="myAudio">
+        <source src="correct_sound.ogg" type="audio/ogg">
+      </audio>
+
+
+    <!-- Click Button -->
+    <script>
+        document.getElementById("btn_Random").addEventListener("click", function () {
+            alert("Random Food Success!!!")
+            PlayAudioRandom();
+            RandomFood();
+        });
+
+    </script>
+
+</body>
+</html>

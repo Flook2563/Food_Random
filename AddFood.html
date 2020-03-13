@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Food</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+ 
+     <!-- Firebase Connection -->
+     <script src="firebase.js"></script>
+     <script src="update.js"></script>
+
+</head>
+<body style="background-color:#ccffe6;">
+    <div class="container col-md-6 .bg-secondary" id="comment">
+        <h2 style="text-align: center;" >เพิ่มรายการอาหาร</h2>
+        <hr>
+        <form id="addData">
+            <input type="text" class="form-control" name="inpuNo"  id="File" placeholder="Number"><br>
+            <input type="text" class="form-control" name="inputFile"  id="File" placeholder="URL รูปภาพ เช่น www.Flook.com/aaa.jpg"><br>
+            <input type="text" class="form-control" name="inputName" id="Name" placeholder="ชื่ออาหาร"><br>
+            <input type="text" class="form-control" name="inputCal" id="Cal" placeholder="ให้พลังงาน"><br>
+            <input type="text" class="form-control" name="inputPrice" id="Price" placeholder="ราคา"><br>
+            <input type="button" id="btn_AddFood"  class="btn btn-danger col-md-12" value="Submit">
+            <a href="index.html" class="btn btn-primary col-md-12">Back</a>
+        </form>
+    </div>
+
+    <!-- Click Button -->
+    <script>
+        AddFood();
+    </script>
+
+</body>
+</html>
